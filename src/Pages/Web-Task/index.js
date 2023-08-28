@@ -8,25 +8,25 @@ const WebTask = () => {
         {
             id: 1,
             summary: "Submit my resume",
-            date: "⏰ Today, 17.00",
+            date: "⏰ 2023-08-28T17:00",
             complete: false
         },
         {
             id: 2,
             summary: "Complete the test",
-            date: "⏰ Tomorrow, 10.00",
+            date: "⏰ 2023-08-29T10:00",
             complete: false
         },
         {
             id: 3,
             summary: "Meeting with Jack",
-            date: "⏰ 24 Feb, 15.00",
+            date: "⏰ 2023-02-24T15:00",
             complete: false
         },
         {
             id: 4,
             summary: "Buy a biscuit for me",
-            date: "⏰ 24 Feb, 17.00",
+            date: "⏰ 2023-02-24T17:00",
             complete: false
         },
         {
@@ -38,7 +38,7 @@ const WebTask = () => {
         {
             id: 6,
             summary: "Rechedule weekly meeting",
-            date: "⏰ Today, 17.00",
+            date: "⏰ 2023-02-24T15:00",
             complete: true
         },
         {
