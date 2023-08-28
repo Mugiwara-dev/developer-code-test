@@ -1,4 +1,5 @@
 import React from "react";
+import {Link} from "react-router-dom";
 const WebLogin = () => {
  return(
      <>
@@ -29,9 +30,11 @@ const WebLogin = () => {
                          />
                      </div>
                      <div className="mt-8">
-                         <button className="w-full py-2.5 bg-black text-white rounded-full">
-                             Login
-                         </button>
+                        <Link to="/task">
+                            <button className="w-full py-2.5 bg-black text-white rounded-full">
+                                Login
+                            </button>
+                        </Link>
                      </div>
                  </form>
              </div>

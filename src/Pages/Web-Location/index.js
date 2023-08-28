@@ -84,16 +84,21 @@ const WebLocation = () => {
 const LocationInput = ({ showModal, setShowModal, handleModalSave, newLocationName, setNewLocationName }) => {
   return (
       <div className={`fixed inset-0 bg-black bg-opacity-25 backdrop-blur-sm flex justify-center items-center h-screen ${showModal ? "" : "hidden"}`}>
-        <div className="bg-white p-4 rounded shadow">
-          <h2>Enter Location Name</h2>
+        <div className="bg-white p-4 rounded shadow flex flex-col">
+          <div className="flex justify-center"><h2 className="font-bold text-2xl">Location Name</h2></div>
           <input
+              className="border w-full px-3 py-2.5 my-5 rounded-md bg-gray-100"
               type="text"
               placeholder="Enter Location Name"
               value={newLocationName}
               onChange={(e) => setNewLocationName(e.target.value)}
           />
-          <button onClick={handleModalSave}>Save</button>
-          <button onClick={() => setShowModal(false)}>Cancel</button>
+          <div className="my2">
+            <button onClick={handleModalSave} className="w-full py-2.5 bg-black text-white rounded-full">Save</button>
+          </div>
+          <div className="flex justify-center mt-3">
+            <button onClick={() => setShowModal(false)}>Cancel</button>
+          </div>
         </div>
       </div>
   );
