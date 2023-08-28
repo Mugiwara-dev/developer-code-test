@@ -11,7 +11,7 @@ const Sidebar = () => {
             <div>
                 <div className="flex flex-col">
                         <ul className=" w-80 h-screen">
-                            {/*<Link to="/task">*/}
+                            <Link to="/task">
                                 <button className={` ${activeButton === "Task" ? "bg-black text-white" : "text-black"} font-bold text-2xl w-4/5 py-3.5 rounded-r-full flex pl-10 mt-5 items-center`} onClick={()=> handleButtonClick("Task")}>
                                     <div className="mr-4">
                                         <svg width="18" height="24" viewBox="0 0 18 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -20,8 +20,8 @@ const Sidebar = () => {
                                     </div>
                                     Task
                                 </button>
-                            {/*</Link>*/}
-                            {/*<Link to="/location">*/}
+                            </Link>
+                            <Link to="/location">
                                 <button className={` ${activeButton === "Location" ? "bg-black text-white" : "text-black"} font-bold text-2xl w-4/5 py-3.5 rounded-r-full flex pl-10 mt-5 items-center`} onClick={()=>handleButtonClick("Location")}>
                                     <div className="mr-4">
                                         <svg width="18" height="24" viewBox="0 0 18 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -30,7 +30,7 @@ const Sidebar = () => {
                                     </div>
                                     Location
                                 </button>
-                            {/*</Link>*/}
+                            </Link>
                         </ul>
                     </div>
             </div>

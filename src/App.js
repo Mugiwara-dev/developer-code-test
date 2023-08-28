@@ -6,7 +6,6 @@ import {
 } from "react-router-dom"
 import WebLogin from "./Pages/Web-Login";
 import WebTask from "./Pages/Web-Task";
-import Sidebar from "./Pages/Side-Bar";
 import WebLocation from "./Pages/Web-Location";
 import WebNewTask from "./Pages/Web-New Task";
 const router = createBrowserRouter([
@@ -17,10 +16,6 @@ const router = createBrowserRouter([
     {
         path: "/task",
         element: <WebTask/>
-    },
-    {
-        path: "/sidebar",
-        element: <Sidebar/>
     },
     {
         path: "/location",
