@@ -1,6 +1,9 @@
 import React, {useState} from "react";
 import SideBar from "../Side-Bar";
 import WebNewTask from "../Web-New Task";
+import SVG from "../../Components/SVGs/svg";
+import Button from "../../Components/Buttons/button";
+import InputField from "../../Components/Inputs/input";
 
 const WebTask = () => {
 
@@ -95,23 +98,17 @@ const WebTask = () => {
             <div className="flex">
                 <SideBar/>
                 <div className="pl-8">
-                    <button onClick={() => setShowModal(true)} className="font-bold py-6 text-lg">+ Add new task
-                    </button>
+                    <Button onClick={() => setShowModal(true)} style="simple">+ Add new task</Button>
                     <div>
                         <h1 className="font-bold text-lg">Incomplete</h1>
                         {incompleteTasks.map((task) => (
                             <ul>
-                                <li key={task.id} className="text-lg flex items-center">
-                                    <label className="flex items-center space-x-2">
+                                <li key={task.id}>
+                                    <label className="flex items-center text-lg py-1.5">
                                                 <span
                                                     className="relative w-6 h-6 rounded-md border border-zinc-300 bg-gradient-to-b from-neutral-50 to-stone-50 flex items-center justify-center">
-                                                    <input
-                                                        type="checkbox"
-                                                        className="opacity-0 w-6 h-6 absolute cursor-pointer"
-                                                        checked={task.complete}
-                                                        onChange={() => handleTaskCompleteChange(task.id)}
-                                                    />
-                                            </span>
+                                                    <InputField type="checkbox" style="Checkbox" checked={task.complete} onChange={() => handleTaskCompleteChange(task.id)}/>
+                                                </span>
                                         <span className="pl-2">{task.summary}</span>
                                     </label>
                                 </li>
@@ -123,20 +120,11 @@ const WebTask = () => {
                         <h1 className="font-bold text-lg py-3">Complete</h1>
                         {completeTasks.map((task, index) => (
                             <ul>
-                                <li key={task.id} className="py-2">
-                                    <label className="flex text-lg">
+                                <li key={task.id}>
+                                    <label className="flex items-center py-1.5 text-lg">
                                         <span className="relative w-6 h-6 rounded-md border border-zinc-300 bg-gradient-to-b from-neutral-50 to-stone-50 flex items-center justify-center">
-                                            <input
-                                                type="checkbox"
-                                                className="opacity-0 w-6 h-6 absolute cursor-pointer"
-                                                checked={task.complete}
-                                                onChange={() => handleTaskCompleteChange(task.id)}
-                                            />
-                                        {task.complete && (
-                                            <svg className="absolute w-4 h-4 text-black" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"/>
-                                            </svg>
-                                                )}
+                                            <InputField type="checkbox" style="Checkbox" checked={task.complete} onChange={()=>handleTaskCompleteChange(task.id)}/>
+                                            <SVG width={24} height={24}  pathName="Tick" strokeLinejoin="round" strokeLinecap="round" strokeWidth="2" fill="currentColor"/>
                                         </span>
                                         <span className="pl-5 text-gray-400">{task.summary}</span>
                                     </label>

@@ -1,5 +1,7 @@
 import React from "react";
 import {Link} from "react-router-dom";
+import Button from "../../Components/Buttons/button";
+import InputField from "../../Components/Inputs/input";
 const WebLogin = () => {
  return(
      <>
@@ -10,30 +12,14 @@ const WebLogin = () => {
              <div  className="mt-10 w-80">
                  <form>
                      <div>
-                         <input
-                             id="email"
-                             name="email"
-                             type="email"
-                             className="border w-full px-3 py-2.5 rounded-md bg-gray-100"
-                             required
-                             placeholder="Email"
-                         />
+                         <InputField id="email" name="email" type="email" style="Simple" placeholder="Email"/>
                      </div>
                      <div className="mt-3">
-                         <input
-                             id="password"
-                             name="password"
-                             type="password"
-                             className="border w-full px-3 py-2.5 rounded-md bg-gray-100"
-                             required
-                             placeholder="Password"
-                         />
+                         <InputField id="password" name="password" type="password" style="Simple" placeholder="Password"/>
                      </div>
                      <div className="mt-8">
                         <Link to="/task">
-                            <button className="w-full py-2.5 bg-black text-white rounded-full">
-                                Login
-                            </button>
+                            <Button style="primary" >Login</Button>
                         </Link>
                      </div>
                  </form>
