@@ -16,7 +16,7 @@ const WebNewTask = ({showModal , setShowModal, handleClick}) => {
                     <div className="mt-9 mx-6">
                         <label className="flex items-start mx-6">
                             <SVG width={21} height={20} fill={"#575767"} pathName={"Summary"} viewBox={"0 0 21 20"}/>
-                            <TextField style={"medium"} placeholder={"Summary"}/>
+                            <TextField style={"medium"} name="summary" placeholder={"Summary"}/>
                         </label>
                         <hr className="my-3"/>
                         <label className="flex items-start mx-6">
