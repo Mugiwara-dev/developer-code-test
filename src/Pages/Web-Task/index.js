@@ -62,7 +62,6 @@ const WebTask = () => {
     let handleClick = (e) => {
         e.preventDefault()
         let newTask = {
-
             id: tasks.length + 1,
             summary: e.target.summary.value,
             date: `⏰ ${e.target.date.value}`,
