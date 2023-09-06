@@ -17,7 +17,7 @@ const WebLocation = () => {
   const handleCheckIn = () => {
     setShowModal(true); // Open the modal
   };
-
+// malik shb
   const handleModalSave = () => {
     const newLocation = {
       name: newLocationName,
